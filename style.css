@@ -1,0 +1,246 @@
+@-webkit-keyframes blink {
+    0%, 100% {
+        transform: scale(1, .05);
+    }
+    5%,
+    95% {
+        transform: scale(1, 1);
+    }
+}
+
+:root {
+  --black: #212121;
+  --gray: #72705f;
+  --yellow: #eeda9e;
+  --blue: #aec6cf;
+}
+
+body {
+  overflow: hidden;
+  background: var(--blue);
+}
+
+.container {
+  height: 380px;
+  width: 424px;
+  position: absolute;
+  top: 50%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 44px;
+}
+
+.body {
+  position: absolute;
+  height: 440px;
+  width: 340px;
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  border-bottom-right-radius: 50% 45%;
+  border-bottom-left-radius: 50% 45%;
+  background: var(--gray);
+  z-index: 0;
+}
+
+.arms {
+  position:absolute;
+  height: 300px;
+  width: 80px;
+  background: var(--gray);
+  border-radius: 50%;
+  transform: rotate(25deg);
+  left: 50%;
+  margin-left: -205px;
+  top: -80px
+  z-index: -1;
+}
+
+.arms:after {
+  content: "";
+  position:absolute;
+  height: 300px;
+  width: 80px;
+  background: var(--gray);
+  border-radius: 50%;
+  transform: rotate(-50deg);
+  left: 50%;
+  margin-left: 180px;
+  top: -100px
+}
+
+.ears {
+  position: absolute;
+  height: 100px;
+  width: 40px;
+  background: var(--gray);
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  transform: rotate(10deg);
+  left: 50%;
+  margin-left: 10px;
+  top: -50px;
+}
+
+.ears:after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 40px;
+  background: var(--gray);
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  transform: rotate(340deg);
+  left: 50%;
+  margin-left: -160px;
+  top: 24px;
+}
+
+.head {
+  position: absolute;
+  height: 40px;
+  width: 140px;
+  background: var(--gray);
+  left: 50%;
+  margin-left: -100px;
+  top: 0px;
+}
+
+.belly {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  background: var(--yellow);
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -192px;
+  top: 130px;
+}
+
+.eye-left {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -130px;
+  top: 50px;
+  -webkit-transform-origin: 50%;
+  -webkit-animation: blink 3s infinite;
+}
+
+.eye-left:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background: var(--black);
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -6px;
+  top: 10px;
+}
+
+.eye-right {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: white;
+  border-radius: 50%;
+  left: 50%;
+  margin-left: 5px;
+  top: 50px;
+  -webkit-transform-origin: 50%;
+  -webkit-animation: blink 3s infinite;
+}
+
+.eye-right:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background: var(--black);
+  border-radius: 50%;
+  left: 50%;
+  margin-left: -6px;
+  top: 10px;
+}
+
+.nose {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 20px solid var(--black);
+  left: 50%;
+  margin-left: -68px;
+  top: 80px;
+  z-index: 1;
+}
+
+.arrow1, .arrow2, .arrow3, .arrow4, .arrow5, .arrow6, .arrow7 {
+  position: absolute;
+  border: solid var(--gray);
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  left: 50%;
+  margin-left: -130px;
+  top: 180px;
+}
+
+.arrow2 {
+  margin-left: -58px;
+}
+
+.arrow3 {
+  margin-left: 15px;
+}
+
+.arrow4 {
+  margin-left: 30px;
+  top: 240px;
+}
+
+.arrow5 {
+  margin-left: -30px;
+  top: 240px;
+}
+
+.arrow6 {
+  margin-left: -90px;
+  top: 240px;
+}
+
+.arrow7 {
+  margin-left: -150px;
+  top: 240px;
+}
+
+.legs {
+  position: absolute;
+  height: 400px;
+  width: 340px;
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  border-bottom-right-radius: 50% 35%;
+  border-bottom-left-radius: 50% 35%;
+  background: var(--gray);
+  top: 50px;
+  z-index: -1;
+}
+
+.mouth {
+  position: absolute;
+  height: 2px;
+  width: 16px;
+  background: var(--black);
+  transform: rotate(350deg);
+  left: 50%;
+  margin-left: -50px;
+  top: 110px;
+}
